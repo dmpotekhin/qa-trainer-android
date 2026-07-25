@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ViewPager2 for horizontal swipe -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Swipe pages (ViewPager2):"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="ViewPager swipe section" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_gesture_pages"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:contentDescription="Swipeable pages"
+            android:tag="vp_gesture_pages"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Horizontal carousel -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horizontal carousel:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Horizontal carousel section" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_carousel"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            android:contentDescription="Horizontal carousel of images"
+            android:tag="rv_carousel"
+            android:layout_marginBottom="24dp"
+            android:clipToPadding="false"
+            android:padding="4dp" />
+
+        <!-- Drag and drop -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drag &amp; Drop (reorder items):"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Drag and drop section" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_drag"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="Drag and drop reorderable list"
+            android:tag="rv_drag"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Pinch to zoom -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pinch-to-zoom (long-press for context menu, double-tap changes background):"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Pinch to zoom section" />
+
+        <FrameLayout
+            android:id="@+id/layout_zoom_area"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/md_theme_light_primaryContainer"
+            android:contentDescription="Zoomable area, long press for menu, double tap to change color"
+            android:tag="layout_zoom_area">
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/photo_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_challenges"
+                android:contentDescription="Zoomable image"
+                android:tag="photo_view" />
+        </FrameLayout>
+
+        <!-- Long vertical scroll content -->
+        <TextView
+            android:id="@+id/scroll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:contentDescription="Long scrollable content"
+            android:tag="scroll_content"
+            android:layout_marginTop="24dp"
+            android:padding="12dp"
+            android:text="Scroll me down! This is a long content area designed to test vertical scrolling gestures. Swipe up to scroll through this text. The QA Trainer app uses this to verify that Appium and Kaspresso can handle scroll gestures correctly. Vertical scrolling is one of the most common gestures in mobile testing. Make sure your test automation framework can find elements that are off-screen and scroll to them. This is repeated 10 times to ensure the content is long enough to require scrolling.\n\n" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_basics"
+        android:icon="@drawable/ic_basics"
+        android:title="@string/tab_basics" />
+    <item
+        android:id="@+id/nav_forms"
+        android:icon="@drawable/ic_forms"
+        android:title="@string/tab_forms" />
+    <item
+        android:id="@+id/nav_lists"
+        android:icon="@drawable/ic_lists"
+        android:title="@string/tab_lists" />
+    <item
+        android:id="@+id/nav_gestures"
+        android:icon="@drawable/ic_gestures"
+        android:title="@string/tab_gestures" />
+    <item
+        android:id="@+id/nav_challenges"
+        android:icon="@drawable/ic_challenges"
+        android:title="@string/tab_challenges" />
+</menu>

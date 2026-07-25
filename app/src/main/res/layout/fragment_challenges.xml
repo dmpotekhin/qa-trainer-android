@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"
+        android:contentDescription="Countdown timer, seconds remaining"
+        android:tag="tv_timer"
+        android:layout_marginBottom="16dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:max="100"
+        android:progress="0"
+        android:contentDescription="Challenge progress"
+        android:tag="progress_bar"
+        android:layout_marginBottom="32dp" />
+
+    <FrameLayout
+        android:id="@+id/challenge_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Initial state -->
+        <LinearLayout
+            android:id="@+id/layout_initial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap Start to begin the challenge"
+                android:textSize="18sp"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="Challenge instructions" />
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/challenge_start"
+                android:contentDescription="Start challenge"
+                android:tag="btn_start"
+                style="@style/Widget.Material3.Button" />
+        </LinearLayout>
+
+        <!-- Challenge active state with 3 colored buttons -->
+        <LinearLayout
+            android:id="@+id/layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Press buttons in order: GREEN → BLUE → RED"
+                android:textSize="14sp"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="Button order hint" />
+
+            <Button
+                android:id="@+id/btn_green"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:text="GREEN"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/challenge_green"
+                android:contentDescription="Green button, press first"
+                android:tag="btn_green"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btn_blue"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:text="BLUE"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/challenge_blue"
+                android:contentDescription="Blue button, press second"
+                android:tag="btn_blue"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btn_red"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:text="RED"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/challenge_red"
+                android:contentDescription="Red button, press third"
+                android:tag="btn_red" />
+        </LinearLayout>
+
+        <!-- Success state -->
+        <LinearLayout
+            android:id="@+id/layout_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_success"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_challenges"
+                android:contentDescription="Success animation placeholder"
+                android:tag="iv_success"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/tv_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/challenge_completed"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/challenge_green"
+                android:contentDescription="Challenge completed message"
+                android:tag="tv_completed" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

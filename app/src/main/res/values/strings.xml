@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QA Trainer</string>
+    <string name="tab_basics">Basics</string>
+    <string name="tab_forms">Forms</string>
+    <string name="tab_lists">Lists</string>
+    <string name="tab_gestures">Gestures</string>
+    <string name="tab_challenges">Challenges</string>
+    <string name="welcome_message">Welcome to QA Trainer!</string>
+    <string name="enable_notifications">Enable notifications</string>
+    <string name="agree_terms">I agree to terms</string>
+    <string name="login">Login</string>
+    <string name="success">Success!</string>
+    <string name="email_hint">Email address</string>
+    <string name="password_hint">Password</string>
+    <string name="submit">Submit</string>
+    <string name="clear">Clear</string>
+    <string name="invalid_email">Please enter a valid email</string>
+    <string name="invalid_password">Password must be > 6 characters</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="advanced">Advanced</string>
+    <string name="search_hint">Search items…</string>
+    <string name="filter_all">All</string>
+    <string name="filter_favorites">Favorites</string>
+    <string name="filter_active">Active</string>
+    <string name="challenge_start">Start</string>
+    <string name="challenge_ready">Ready?</string>
+    <string name="challenge_yes">Yes</string>
+    <string name="challenge_no">No</string>
+    <string name="challenge_started">Challenge started</string>
+    <string name="challenge_retry">Try again</string>
+    <string name="challenge_completed">Completed!</string>
+    <string name="challenge_retry_title">Retry?</string>
+    <string name="challenge_retry_message">Wrong order! Want to try again?</string>
+    <string name="back">Back</string>
+    <string name="favorite">Favorite</string>
+    <string name="context_menu_option1">Option A</string>
+    <string name="context_menu_option2">Option B</string>
+    <string name="context_menu_option3">Option C</string>
+</resources>

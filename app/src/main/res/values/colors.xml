@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 Indigo / Deep Orange palette -->
+    <color name="md_theme_light_primary">#4355B9</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#DEE0FF</color>
+    <color name="md_theme_light_secondary">#FF6E40</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_surface">#FEFBFF</color>
+    <color name="md_theme_light_onSurface">#1B1B1F</color>
+    <color name="md_theme_light_background">#FEFBFF</color>
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_outline">#757680</color>
+
+    <color name="md_theme_dark_primary">#BBC3FF</color>
+    <color name="md_theme_dark_onPrimary">#03218A</color>
+    <color name="md_theme_dark_primaryContainer">#293CA0</color>
+    <color name="md_theme_dark_secondary">#FF8A67</color>
+    <color name="md_theme_dark_onSecondary">#561300</color>
+    <color name="md_theme_dark_surface">#1B1B1F</color>
+    <color name="md_theme_dark_onSurface">#E4E1E6</color>
+    <color name="md_theme_dark_background">#1B1B1F</color>
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_dark_outline">#8F9099</color>
+
+    <color name="challenge_green">#4CAF50</color>
+    <color name="challenge_blue">#2196F3</color>
+    <color name="challenge_red">#F44336</color>
+    <color name="favorite_active">#E91E63</color>
+</resources>

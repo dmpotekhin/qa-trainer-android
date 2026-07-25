@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_message"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:contentDescription="Welcome message"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="24dp"
+            android:tag="welcome_message" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_challenges"
+            android:contentDescription="App logo"
+            android:layout_marginBottom="24dp"
+            android:tag="app_logo" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:contentDescription="Login button"
+            android:tag="btn_login"
+            style="@style/Widget.Material3.Button"
+            android:layout_marginBottom="16dp" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enable_notifications"
+            android:contentDescription="Enable notifications switch"
+            android:tag="sw_notifications"
+            android:layout_marginBottom="12dp" />
+
+        <CheckBox
+            android:id="@+id/cb_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/agree_terms"
+            android:contentDescription="I agree to terms checkbox"
+            android:tag="cb_terms"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skill level:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="?attr/colorOnSurface" />
+
+        <RadioGroup
+            android:id="@+id/rg_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:contentDescription="Skill level radio group"
+            android:tag="rg_level"
+            android:layout_marginBottom="16dp"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/rb_beginner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/beginner"
+                android:contentDescription="Beginner level"
+                android:tag="rb_beginner" />
+
+            <RadioButton
+                android:id="@+id/rb_intermediate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/intermediate"
+                android:contentDescription="Intermediate level"
+                android:tag="rb_intermediate" />
+
+            <RadioButton
+                android:id="@+id/rb_advanced"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/advanced"
+                android:contentDescription="Advanced level"
+                android:tag="rb_advanced" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/layout_advanced_hidden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:contentDescription="Advanced options, hidden by default"
+            android:tag="layout_advanced_hidden"
+            android:padding="16dp"
+            android:background="@drawable/card_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Advanced settings unlocked!"
+                android:textSize="16sp"
+                android:textColor="@color/md_theme_light_secondary"
+                android:textStyle="bold"
+                android:contentDescription="Advanced mode text" />
+
+            <TextView
+                android:id="@+id/tv_advanced_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You are now in advanced mode. Extra features are available for Appium and Kaspresso testing."
+                android:textSize="14sp"
+                android:contentDescription="Advanced mode description"
+                android:layout_marginTop="8dp"
+                android:tag="tv_advanced_info" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
